@@ -1,4 +1,3 @@
-
 export interface Product {
   id: number;
   name: string;
@@ -805,6 +804,10 @@ export const products: Product[] = [
     stock: 4
   }
 ];
+
+export const getAllProducts = (): Product[] => {
+  return products;
+};
 
 export const getProductById = (id: number): Product | undefined => {
   return products.find(product => product.id === id);
